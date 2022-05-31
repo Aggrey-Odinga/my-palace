@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyRestaurants</string>
+    <string name="find_restaurants">Find Restaurants</string>
 </resources>

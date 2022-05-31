@@ -15,6 +15,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildTypes.each {
+        it.buildConfigField 'String', 'YELP_API_KEY', YelpApiKey
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -28,6 +32,19 @@ android {
 }
 
 dependencies {
+
+//    retrofit
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+//   butterknife
+
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+//    robolectric
+    testImplementation "org.robolectric:robolectric:4.8.1"
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
